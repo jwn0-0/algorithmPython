@@ -1,4 +1,4 @@
-from bisect import bisect_left, bisect_right
+from bisectp import bisect_left, bisect_right
 def calCountsByRange(nums, left_value, right_value):
     r_i = bisect_right(nums, right_value)
     l_i = bisect_left(nums, left_value)
