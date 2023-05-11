@@ -21,7 +21,7 @@ def findC(k):
         #print(moeumcount, jaeumcount)
         if moeumcount >=1 and jaeumcount >=2:
             #print(ans)
-            print("".join(map(str, sorted(ans))))
+            print("".join(map(str, ans)))
         return
     for i in range(k,C):
         #print(i,k)
