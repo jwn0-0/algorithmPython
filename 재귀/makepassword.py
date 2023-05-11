@@ -3,11 +3,8 @@ input = sys.stdin.readline
 L, C = map(int, input().split())
 a = list(map(str, input().split()))
 alphalist = sorted(a)
-#print(L,C, alphalist)
 moeum = ['a','e','i','o','u']
-#print(len(moeum))
 
-total = []
 ans = []
 def findC(k):
     if len(ans) == L: #4개의 조합일때
@@ -18,9 +15,8 @@ def findC(k):
                 moeumcount += 1
             else:
                 jaeumcount += 1
-        #print(moeumcount, jaeumcount)
+        #모음 1개이상 자음 2개이상
         if moeumcount >=1 and jaeumcount >=2:
-            #print(ans)
             print("".join(map(str, ans)))
         return
     for i in range(k,C):
@@ -30,7 +26,7 @@ def findC(k):
             #print(alphalist[i]+" appended" + str(i))
             k=i+1
             findC(k)
-            ans.pop()
+            ans.pop() #return하면 여기로 넘어옴
 
 findC(0)
 
