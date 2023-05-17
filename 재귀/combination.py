@@ -6,7 +6,7 @@ input = sys.stdin.readline
 n = int(input())
 a = list(map(int, input().split()))
 for i in range(n - 1, 0, -1):
-    if a[i - 1] < a[i]:
+    if a[i - 1] < a[i]: #타겟 찾기, 추후에 바꿔줘야함
         target = i - 1
         break
     else:
@@ -14,9 +14,9 @@ for i in range(n - 1, 0, -1):
         sys.exit()
 
 for i in range(n - 1, 0, -1):
-    if a[target] < a[i]:
-        a[target], a[i] = a[i], a[target]
-        a = a[:target + 1] + sorted(a[target + 1:])
+    if a[target] < a[i]: #target값보다 클경우
+        a[target], a[i] = a[i], a[target] #swap
+        a = a[:target + 1] + sorted(a[target + 1:]) # 1,3 이정해지면 뒤는 sort되어서 나옴
         print(*a)
         break
 
