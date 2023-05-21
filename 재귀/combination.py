@@ -9,9 +9,9 @@ for i in range(n - 1, 0, -1):
     if a[i - 1] < a[i]: #타겟 찾기, 추후에 바꿔줘야함
         target = i - 1
         break
-    else:
-        print(-1)
-        sys.exit()
+else:
+    print(-1)
+    sys.exit()
 
 for i in range(n - 1, 0, -1):
     if a[target] < a[i]: #target값보다 클경우
